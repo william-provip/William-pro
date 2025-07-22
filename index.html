@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WILLIAM PRO SIGNALS</title>
+  <link rel="stylesheet" href="style.css" />
+  <audio id="alertSound" src="https://cdn.pixabay.com/download/audio/2022/01/27/audio_8e9f4b9a2c.mp3?filename=short-alarm-sound-43892.mp3" preload="auto"></audio>
+</head>
+<body>
+
+  <!-- شاشة التفعيل -->
+  <div id="activationScreen" class="modal">
+    <div class="modal-content">
+      <h2>WILLIAM PRO ACCESS</h2>
+      <p style="color: #00f3ff; margin-bottom: 15px;">مرحباً بكم في عالم ويليام</p>
+      <p style="color: #aaa; font-size: 0.9em; margin-bottom: 15px;">نظام إشارات تداول دقيق تم تطويره خصيصًا لأعضاء الفريق</p>
+      <p>أدخل كود التفعيل للدخول</p>
+      <input type="password" id="activationCode" placeholder="أدخل الكود" />
+      <button onclick="checkCode()">تفعيل النظام</button>
+      <p id="errorMessage" style="color: red; margin-top: 10px; display: none;">كود خاطئ!</p>
+    </div>
+  </div>
+
+  <!-- الشاشة الرئيسية -->
+  <div id="mainScreen" style="display: none;">
+    <div class="container">
+      <header>
+        <h1 id="mainTitle">WILLIAM PRO</h1>
+        <p class="tagline" data-key="tagline">LIVE TRADING SIGNALS | PRECISION & POWER | 🎯 دقة: 80%</p>
+      </header>
+
+      <div class="signal-box" id="signalBox">
+        <p>اضغط الزر لتوليد إشارة حية</p>
+      </div>
+
+      <button onclick="generateSignal()" class="btn-generate">🎯 GENERATE LIVE SIGNAL</button>
+
+      <div id="countdown" style="font-size: 1.5em; color: #ff3838; margin: 15px 0; display: none;"></div>
+
+      <div id="williamTip" style="color: #00f3ff; font-size: 0.9em; margin: 10px 0; padding: 10px; border-top: 1px dashed #00f3ff;"></div>
+
+      <div id="profitCounter" style="color: #00ff41; font-size: 1.1em; margin: 15px 0;"><strong>📈 أرباح الفريق اليوم: $980</strong></div>
+
+      <div class="history" id="history">
+        <p style="color: #aaa; font-size: 0.9em; margin-top: 20px;">📌 الإشارات السابقة:</p>
+      </div>
+
+      <div class="info">
+        <p>✅ المؤشرات: Stochastic + RSI | ⏱️ المدة: 1 دقيقة</p>
+      </div>
+
+      <a href=" https://t.me/W_Pro7 " target="_blank" class="btn-support">
+        💬 <span id="supportText">دعم مباشر على تيليجرام</span>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
